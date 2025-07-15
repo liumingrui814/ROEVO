@@ -1,0 +1,35 @@
+%YAML:1.0
+
+#common parameters
+dataset: "TUM"
+pathDataset: "/home/lab/slamData/TUM-RGBD/"
+
+Camera.fx: 535.4
+Camera.fy: 539.2
+Camera.cx: 320.1
+Camera.cy: 247.6
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+Camera.k3: 0.0
+
+DepthMapFactor: 5000
+
+#parameters for coarse tracking
+coarse.kf_trans_thres: 0.003
+coarse.kf_rot_thres: 0.4
+coarse.sample_bias: 7
+coarse.maximum_point: 1500
+coarse.cannyHigh: 10
+coarse.cannyLow: 5
+
+
+#parameters for fine tracking
+fine.kf_trans_thres: 0.03
+fine.kf_rot_thres: 4
+fine.geo_photo_ratio: 0.01
+fine.sample_bias: 4 #sample bias for each fine edge
+fine.cannyHigh: 15
+fine.cannyLow: 7

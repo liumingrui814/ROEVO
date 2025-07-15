@@ -1,0 +1,35 @@
+%YAML:1.0
+
+#common parameters
+dataset: "ETH"
+pathDataset: "/home/lab/slamData/ETH-3D/"
+
+Camera.fx: 726.28741455078
+Camera.fy: 726.28741455078
+Camera.cx: 354.6496887207
+Camera.cy: 186.46566772461
+
+Camera.k1: 0
+Camera.k2: 0
+Camera.p1: 0
+Camera.p2: 0
+Camera.k3: 0
+
+DepthMapFactor: 5000.0
+
+#parameters for coarse tracking
+coarse.kf_trans_thres: 0.003
+coarse.kf_rot_thres: 0.4
+coarse.sample_bias: 5
+coarse.maximum_point: 2000
+coarse.cannyHigh: 40
+coarse.cannyLow: 20
+
+
+#parameters for fine tracking
+fine.kf_trans_thres: 0.05
+fine.kf_rot_thres: 7
+fine.geo_photo_ratio: 0.01 
+fine.sample_bias: 4 #sample bias for each fine edge
+fine.cannyHigh: 40
+fine.cannyLow: 15
