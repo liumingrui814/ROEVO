@@ -1,0 +1,42 @@
+%YAML:1.0
+
+#common parameters
+dataset: "ICL"
+pathDataset: "/home/lab/slamData/ICL-NUIM/"
+
+Camera.fx: 481.2
+Camera.fy: -480.0
+Camera.cx: 319.5
+Camera.cy: 239.5
+
+Camera.k1: 0
+Camera.k2: 0
+Camera.p1: 0
+Camera.p2: 0
+Camera.k3: 0
+
+DepthMapFactor: 5000.0
+
+#parameters for coarse tracking
+coarse.width: 640
+coarse.height: 480
+coarse.kf_trans_thres: 0.008
+coarse.kf_rot_thres: 0.3
+coarse.sample_bias: 7
+coarse.maximum_point: 1500
+coarse.cannyHigh: 40
+coarse.cannyLow: 20
+
+
+#parameters for fine tracking
+fine.kf_trans_thres: 0.05
+fine.kf_rot_thres: 7
+fine.geo_photo_ratio: 0.01 
+fine.sample_bias: 4 #sample bias for each fine edge
+fine.cannyHigh: 40
+fine.cannyLow: 20
+
+win.kf_trans_thres: 0.05
+win.kf_rot_thres: 7
+win.window_size: 10
+win.window_step: 7
